@@ -1,7 +1,7 @@
-import { NavbarType } from "@/types/Layout"
+import { NavBarItem } from "@/types/Layout"
 import Link from "next/link"
 
-const navItems = [
+const navItems: NavBarItem[] = [
 	{
 		navName: "Home",
 		path: "/"
@@ -24,16 +24,25 @@ const navItems = [
 const Navbar = () => {
 
 	return (
-		<div className="flex">
-			{(navItems.map((val, i) => {
-				return (
-					<div key={i}>
-						<Link href={val.path}>
-							{val.navName}
-						</Link>
-					</div>
-				)
-			}))}
+		<div className="flex justify-around pt-5">
+			<div>
+				Logo
+			</div>
+			<div className="flex gap-5">
+				{(navItems.map((val, i) => {
+					return (
+						<div key={i}>
+							<Link href={val.path as string}>
+								{val.navName}
+							</Link>
+						</div>
+					)
+				}))}
+			</div>
+			<div>
+
+			</div>
+
 		</div>
 	)
 }
