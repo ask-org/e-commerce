@@ -24,7 +24,7 @@ const navItems: NavBarItem[] = [
 const Navbar = () => {
 
 	return (
-		<div className="flex justify-around pt-5">
+		<div className="flex justify-around py-5 fixed bg-white w-screen">
 			<div>
 				Logo
 			</div>
