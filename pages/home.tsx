@@ -4,9 +4,6 @@ import Banner from "@/app/pageComponents/Home/Banner";
 const Home = () => {
 	return (
 		<div className="">
-
-			
-
 			<Layout>
 				<Banner />
 			</Layout>
