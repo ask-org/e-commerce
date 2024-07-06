@@ -6,7 +6,7 @@ const Home = () => {
 		<div className="">
 
 			
-
+			testing
 			<Layout>
 				<Banner />
 			</Layout>
