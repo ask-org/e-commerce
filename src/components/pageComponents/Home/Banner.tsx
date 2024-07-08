@@ -1,6 +1,5 @@
 import Image from "next/image"
 import BannerImage from "@/assets/banner2.jpg"
-import CustomButton from "@/app/utils/CustomButton"
 
 
 
@@ -18,10 +17,6 @@ function Banner() {
                                         <div className="pl-40 pt-10">
                                                 <div className="text-3xl font-semibold pt-4">
                                                         Sell and and buy second hand books.
-                                                </div>
-                                                <div className="pt-5">
-                                                        <CustomButton btname={"shop now"} />
-
                                                 </div>
                                                 <div>
                                                 </div>

@@ -8,7 +8,6 @@ const Home = () => {
 				<Banner />
 			</div>
 		</Layout>
-
 	</div>
 }
 export default Home 
