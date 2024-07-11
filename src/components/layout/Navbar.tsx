@@ -1,50 +1,60 @@
-import { NavBarItem } from "@/types/Layout"
-import Link from "next/link"
+import { NavBarItem } from "@/types/Layout";
+import Link from "next/link";
+import { CiSearch } from "react-icons/ci";
+import { RiShoppingCartLine } from "react-icons/ri";
 
 const navItems: NavBarItem[] = [
-	{
-		navName: "Home",
-		path: "/"
-	},
-	{
-		navName: "About",
-		path: "/about"
-	},
-	{
-		navName: "Contact",
-		path: "/contact"
-	},
-	{
-		navName: "Services",
-		path: "/services"
-	},
-]
-
+  {
+    navName: "Home",
+    path: "/",
+  },
+  {
+    navName: "Collections",
+    path: "/about",
+  },
+  {
+    navName: "New Release",
+    path: "/contact",
+  },
+  {
+    navName: "Popular",
+    path: "/services",
+  },
+];
 
 const Navbar = () => {
+  return (
+    <nav className=" flex  px-10  justify-between items-center pt-5">
+      {/* logo section  */}
+      <section>
+        <h1 className="text-2xl font-bold">Logo</h1>
+      </section>
 
-	return (
-		<div className="flex justify-around py-5 fixed bg-white w-screen">
-			<div>
-				Logo
-			</div>
-			<div className="flex gap-5">
-				{(navItems.map((val, i) => {
-					return (
-						<div key={i}>
-							<Link href={val.path as string}>
-								{val.navName}
-							</Link>
-						</div>
-					)
-				}))}
-			</div>
-			<div>
+      {/* nav-items  */}
+      <section className="flex items-center    gap-14 font-medium text-md text-[#222222]">
+        {navItems.map((navitem, index) => {
+          return (
+            <ul key={index}>
+              <li>
+                <Link href={navitem.path as string}>{navitem.navName}</Link>
+              </li>
+            </ul>
+          );
+        })}
+      </section>
 
-			</div>
+      {/* login and cart section  */}
 
-		</div>
-	)
-}
+      <section className="flex gap-4 text-lg">
+        <button>
+          <CiSearch />
+        </button>
+        <button>
+          <RiShoppingCartLine />
+        </button>
+      </section>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
