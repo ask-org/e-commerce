@@ -1,4 +1,4 @@
-import { NavBarItem } from "@/types/Layout";
+import { NavBarItem } from "@/src/types/Layout";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { RiShoppingCartLine } from "react-icons/ri";
